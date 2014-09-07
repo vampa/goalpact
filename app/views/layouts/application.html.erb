@@ -13,9 +13,20 @@
 	<a href="<%= root_path %>" id="logo">
 		<h1>GOAL <span>PACT</span></h1>
 	</a>
-
-	<p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  
+  <% if notice %>
+    <p class="notice">
+      <span class="name">NOTICE</span>
+      <span class="message"><%= notice %></span>
+    </p>
+  <% end %>
+  
+  <% if alert %>
+    <p class="alert">
+      <span class="name">ALERT</span>
+      <span class="message"><%= alert %></span>
+    </p>
+  <% end %>
 
 	<%= yield %>
 

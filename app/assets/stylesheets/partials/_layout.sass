@@ -43,7 +43,7 @@ p
 #logo h1
 	width: 100%
 	text-align: center
-	padding: 5% 0
+	padding: 10% 0 5% 0
 	font-size: 2.5em
 	color: white
 	font-weight: 100
@@ -51,3 +51,48 @@ p
 		color: $light-green
 		width: auto
 		float: none
+
+p.notice
+	width: 100%
+	margin: 0 auto 15px auto
+	span.name
+		background-color: $dark-green
+		font-weight: 700
+		color: white
+		width: 20%
+		padding: 10px
+	span.message
+		background-color: #0eb292
+		color: #bcfff2
+		width: 80%
+		padding: 10px 15px
+		text-align: left
+
+p.alert
+	width: 100%
+	margin: 0 auto 15px auto
+	span.name
+		background-color: #a8313f
+		font-weight: 700
+		color: white
+		width: 20%
+		padding: 10px
+	span.message
+		background-color: #81434a
+		color: #edbec3
+		width: 80%
+		padding: 10px 15px
+		text-align: left
+
+div#error_explanation
+	width: 100%
+	margin: 0 auto 15px auto
+	h2
+		background-color: #a8313f
+		font-weight: 700
+		color: white
+		padding: 10px
+	ul
+		background-color: #81434a
+		color: #edbec3
+		padding: 10px 15px
