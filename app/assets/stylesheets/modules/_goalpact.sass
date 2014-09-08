@@ -1,0 +1,36 @@
+// HOME PAGE
+
+h2.list-header
+	text-align: left
+	color: darken($dark-blue, 15%)
+	font-weight: 400
+	padding-bottom: 7px
+
+ul#goals, ul#pacts
+	width: 100%
+	float: left
+	text-align: left
+	margin-bottom: 20px
+	background-color: #415569
+	+roundedCorners()
+	li
+		clear: left
+		a
+			width: 100%
+			display: block
+			padding: 10px
+			clear: left
+			color: white
+			span
+				font-weight: 400
+				width: auto
+				&.green
+					color: $light-green
+		&:nth-child(odd)
+			background-color: #50687f
+		&:first-child
+			+roundedCorners(4px 4px 0 0)
+		&:last-child
+			+roundedCorners(0 0 4px 4px)
+		&:hover
+			background-color: lighten(#50687f, 5%)

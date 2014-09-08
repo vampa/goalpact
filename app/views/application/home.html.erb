@@ -1,4 +1,20 @@
 <% if user_signed_in? %>
-	<a href="#" class="button">Pay Here now and be a good person</a>
-	<%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "button") %> 
+	<h2 class="list-header">GOALS</h2>
+	<ul id="goals">
+		<li><a href="">CHICAGO MARATHON</a></li>
+		<li><a class="green" href=""><span class="icon icon-plus"></span>NEW GOAL</a></li>
+	</ul>
+	<h2 class="list-header">
+		PACTS
+		<a class="right green" href="#">HISTORY</a>
+	</h2>
+	<ul id="pacts">
+		<li><a href="">@John Doe<span class="right green">$50</span></a></li>
+		<li><a href="">@Dave Masterson<span class="right green">$5</span></a></li>
+	</ul>
+	
+	<div id="links-wrap">
+		<a href="">Account Settings</a>
+		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+	</div>
 <% end %>
