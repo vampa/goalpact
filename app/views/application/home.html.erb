@@ -1,11 +1,14 @@
 <% if user_signed_in? %>
-	<h2 class="list-header">GOALS</h2>
+	<% if current_user.first_name != nil %>
+		Welcome back, <%= user.full_name %>
+	<% end %>
+	<h2 class="list-header">Goals:</h2>
 	<ul id="goals">
 		<li><a href="">CHICAGO MARATHON</a></li>
 		<li><a class="green" href=""><span class="icon icon-plus"></span>NEW GOAL</a></li>
 	</ul>
 	<h2 class="list-header">
-		PACTS
+		Pacts:
 		<a class="right green" href="#">HISTORY</a>
 	</h2>
 	<ul id="pacts">
@@ -14,7 +17,7 @@
 	</ul>
 	
 	<div id="links-wrap">
-		<a href="">Account Settings</a>
+		<a href="<%= edit_user_registration_path %>">Account Settings</a>
 		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
 	</div>
 <% end %>
