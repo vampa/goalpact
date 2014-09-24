@@ -4,12 +4,12 @@
 
   <%= devise_error_messages! %>
 
-  <h2 class="form-title">EMAIL</h2>
+  <h2 class="form-title">Email</h2>
   <fieldset>
     <%= f.email_field :email, autofocus: true, placeholder: "email@example.com" %>
   </fieldset>
 
-  <h2 class="form-title">NAME</h2>
+  <h2 class="form-title">Name</h2>
   <fieldset class="pure-group">
     <%= f.text_field :first_name, placeholder: "First Name" %>
     <%= f.text_field :last_name, placeholder: "Last Name" %>
@@ -19,18 +19,17 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <h2 class="form-title">CHANGE PASSWORD</h2>
+  <h2 class="form-title">Change Password *</h2>
   <fieldset class="pure-group">
     <%= f.password_field :password, autocomplete: "off", :placeholder => "New Password" %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Confirm New Password"  %>  
+    <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Confirm New Password"  %>
   </fieldset>
-  <p class="hint">(Leave blank if you don't want to change your password)</p>
+  <p class="hint">* Leave blank if you don't want to change your password</p>
 
-  <h2 class="form-title">CURRENT PASSWORD</h2>
+  <h2 class="form-title">Confirm Current Password</h2>
   <fieldset>
     <%= f.password_field :current_password, autocomplete: "off" %>
   </fieldset>
-  <p class="hint">(Confirm your current password to save changes!)</p>
 
   <div><%= f.submit "Update Account" %></div>
 
