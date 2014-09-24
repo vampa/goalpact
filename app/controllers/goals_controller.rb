@@ -4,7 +4,10 @@ class GoalsController < ApplicationController
   protect_from_forgery with: :exception
   before_action :authenticate_user!
 
-  def home
+  def new
+	end
+
+	def create
 	end
 
 end
