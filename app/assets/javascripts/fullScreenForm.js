@@ -525,6 +525,20 @@ if ( typeof define === 'function' && define.amd ) {
     // main controls wrapper
     this.ctrls = createElement( 'div', { cName : 'fs-controls', appendTo : document.getElementById( 'form-controls-wrap' ) } );
 
+    // field number status
+    if( this.options.ctrlNavPosition ) {
+      this.ctrlFldStatus = createElement( 'span', { cName : 'fs-numbers', appendTo : this.ctrls } );
+
+      // current field placeholder
+      this.ctrlFldStatusCurr = createElement( 'span', { cName : 'fs-number-current', inner : Number( this.current + 1 ) } );
+      this.ctrlFldStatus.appendChild( this.ctrlFldStatusCurr );
+
+      // total fields placeholder
+      this.ctrlFldStatusTotal = createElement( 'span', { cName : 'fs-number-total', inner : this.fieldsCount } );
+      this.ctrlFldStatus.appendChild( this.ctrlFldStatusTotal );
+      this._showCtrl( this.ctrlFldStatus );
+    }
+
     // continue button (jump to next field)
     this.ctrlContinue = createElement( 'button', { cName : 'fs-continue', inner : 'Continue', appendTo : this.ctrls } );
     this._showCtrl( this.ctrlContinue );
@@ -539,20 +553,6 @@ if ( typeof define === 'function' && define.amd ) {
       this.ctrlNav.innerHTML = dots;
       this._showCtrl( this.ctrlNav );
       this.ctrlNavDots = [].slice.call( this.ctrlNav.children );
-    }
-
-    // field number status
-    if( this.options.ctrlNavPosition ) {
-      this.ctrlFldStatus = createElement( 'span', { cName : 'fs-numbers', appendTo : this.ctrls } );
-
-      // current field placeholder
-      this.ctrlFldStatusCurr = createElement( 'span', { cName : 'fs-number-current', inner : Number( this.current + 1 ) } );
-      this.ctrlFldStatus.appendChild( this.ctrlFldStatusCurr );
-
-      // total fields placeholder
-      this.ctrlFldStatusTotal = createElement( 'span', { cName : 'fs-number-total', inner : this.fieldsCount } );
-      this.ctrlFldStatus.appendChild( this.ctrlFldStatusTotal );
-      this._showCtrl( this.ctrlFldStatus );
     }
 
     // progress bar
