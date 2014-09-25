@@ -681,6 +681,9 @@ if ( typeof define === 'function' && define.amd ) {
       this._updateFieldNumber();
 
       var nextField = this.fields[ this.current ];
+      var height = nextField.offsetHeight;
+      document.getElementById('fs-fields').style.height = (height+15) + "px";
+
       classie.add( nextField, 'fs-current' );
       classie.add( nextField, 'fs-show' );
     }
@@ -702,6 +705,7 @@ if ( typeof define === 'function' && define.amd ) {
           self._hideCtrl( self.ctrlContinue );
           self._hideCtrl( self.ctrlFldStatus );
           // replace class fs-form-full with fs-form-overview
+          document.getElementById('fs-fields').style.height = "";
           classie.remove( self.formEl, 'fs-form-full' );
           classie.add( self.formEl, 'fs-form-overview' );
           classie.add( self.formEl, 'fs-show' );

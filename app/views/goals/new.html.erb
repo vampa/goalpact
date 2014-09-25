@@ -5,19 +5,46 @@
 
 <div class="fs-form-wrap" id="fs-form-wrap">
 	<%= form_for(create_goal_path, html: {class: "fs-form fs-form-full pure-form", id: "myform", autocomplete: "off" }) do |f| %>
-		<h2 id="overview-header" style="color: white;text-align: left; font-weight: 200; padding-bottom: 0; margin-bottom: 0;">Review your answers:</h2>
-		<ol class="fs-fields">
-			<li>
+		<h2 id="overview-header" style="color: white;text-align: left; font-weight: 200; padding-bottom: 0; margin-bottom: 0;">Review your answers (click them to edit):</h2>
+		<ol class="fs-fields" id="fs-fields">
+			<li height="150px">
 				<h2 class="fs-field-label form-title fs-anim-upper" for="person[name]">What's your name?</h2>
 				<input class="fs-anim-lower" id="person[name]" name="person[name]" type="text" placeholder="Ferris Bueller" required/>
 			</li>
-			<li>
+			<li height="150px">
 				<h2 class="fs-field-label form-title fs-anim-upper" for="goal[type]">What's your Goal?</h2>
-				<p class="natural-text" style="width: 100%; text-align: left;">I am <select class="fs-anim-lower" id="goal[type]" name="q2">
-								<option value="alsdkfj">running a marathon</option></select>.</p>
+				<span class="natural-text" style="width: 100%; text-align: left;">I am <select class="fs-anim-lower" id="goal[type]" name="goal[type]" required>
+								<option value="alsdkfj">running a marathon</option></select>.</span>
+			</li>
+			<li height="150px">
+				<h2 class="fs-field-label form-title fs-anim-upper" for="goal[name]">Cool! Which one?</h2>
+				<span class="natural-text" style="width: 100%; text-align: left;">
+					It is called: <br/>
+					<input class="fs-anim-lower" id="goal[name]" name="goal[name]" placeholder="The Chicago Marathon" style="width: 95%;margin-left: 0;" required/>.
+				</span>
+			</li>
+			<li height="150px">
+				<h2 class="fs-field-label form-title fs-anim-upper" for="goal_date">When is it?</h2>
+				<span class="natural-text" style="width: 100%; text-align: left;">
+					It's on: <br />
+					<%= f.date_select :goal_date, {  :include_blank => true, :start_year => Date.today.year }, :required => true, :class => "fs-anim-lower date_select", :style => "margin-left: 0;padding: 1em;" %>.
+				</span>
+			</li>
+			<li height="200px">
+				<h2 class="fs-field-label form-title fs-anim-upper" for="goal[first]">Awesome! Have you ran a marathon one before?</h2>
+				<select class="fs-anim-lower" id="goal[first]" name="goal[first]" style="width: 100%;" required>
+					<option value="false">Yes, I have!</option>
+					<option value="true">Nope, first time!</option>
+				</select>
+			</li>
+			<li height="200px">
+				<h2 class="fs-field-label form-title fs-anim-upper" for="goal[charity]">Amazing! What organization are you running for?</h2>
+				<select class="fs-anim-lower" id="goal[charity]" name="goal[charity]" style="width: 100%;" required>
+					<option value="1">ALS Foundation</option>
+				</select>
 			</li>
 		</ol><!-- /fs-fields -->
-		<button class="fs-submit" type="submit">Send answers</button>
+		<button class="fs-submit" type="submit">Create Goal!</button>
 	<% end %>
 </div><!-- /fs-form-wrap -->
 <div id="form-controls-wrap"></div>

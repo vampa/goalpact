@@ -106,6 +106,10 @@ button.fs-continue,
 	border-bottom: 2px solid rgba(0,0,0,0.1);
 }
 
+.fs-form-overview .fs-fields li span{
+	color: white;
+}
+
 #overview-header{
 	display: none;
 }
@@ -570,7 +574,7 @@ button.fs-continue,
 /* Error message */
 .fs-message-error {
 	position: absolute;
-	top: 10%;
+	top: 10px;
 	left: 50%;
 	z-index: 800;
 	max-width: 960px;
