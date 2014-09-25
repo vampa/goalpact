@@ -1,9 +1,11 @@
-<h1 class="page-content-header">
-	We want to know all about YOU and YOUR GOAL!
+<h1 class="page-content-header" id="page-content-header">
+	Tell us about your goal!
 </h1>
+
 
 <div class="fs-form-wrap" id="fs-form-wrap">
 	<%= form_for(create_goal_path, html: {class: "fs-form fs-form-full pure-form", id: "myform", autocomplete: "off" }) do |f| %>
+		<h2 id="overview-header" style="color: white;text-align: left; font-weight: 200; padding-bottom: 0; margin-bottom: 0;">Review your answers:</h2>
 		<ol class="fs-fields">
 			<li>
 				<h2 class="fs-field-label form-title fs-anim-upper" for="q1">What's your name?</h2>

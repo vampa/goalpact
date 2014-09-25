@@ -557,7 +557,7 @@ if ( typeof define === 'function' && define.amd ) {
 
     // progress bar
     if( this.options.ctrlProgress ) {
-      this.ctrlProgress = createElement( 'div', { cName : 'fs-progress', appendTo : this.el } );
+      this.ctrlProgress = createElement( 'div', { cName : 'fs-progress'} );
       this._showCtrl( this.ctrlProgress );
     }
   }

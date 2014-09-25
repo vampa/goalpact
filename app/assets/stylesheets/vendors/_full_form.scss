@@ -101,9 +101,17 @@ button.fs-continue,
 
 .fs-form-overview .fs-fields > li,
 .no-js .fs-form .fs-fields > li {
-	margin: 1em 0 2em;
-	padding: 0 0 2em 0;
+	margin: 1em 0;
+	padding: 0 0 .5em 0;
 	border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+#overview-header{
+	display: none;
+}
+
+.fs-form-overview #overview-header {
+	display: block;
 }
 
 /* Labels & info */
@@ -686,6 +694,10 @@ input[type=text]::-ms-clear {
     display: none;
 }
 
+button.fs-continue{
+	margin-top: 15px;
+}
+
 /* Adjust form for smaller screens */
 @media screen and (max-width: 52.5em) {
 	body {
@@ -708,7 +720,7 @@ input[type=text]::-ms-clear {
 	.fs-form.fs-form-overview {
 		top: 0;
 		right: 0;
-		padding: 1.5em 1em 8em 1em;
+		padding: 0;
 		font-size: 1.5em;
 	}
 
@@ -717,7 +729,7 @@ input[type=text]::-ms-clear {
 	}
 
 	.fs-numbers {
-		margin: 20px;
+		margin: 15px 0;
 	}
 
 	.fs-nav-dots {
@@ -732,36 +744,21 @@ input[type=text]::-ms-clear {
 		width: 50px;
 		height: 50px;
 		border-radius: 50%;
-		font-size: 2em;
-	}
-
-	button.fs-continue::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		content: '\27A1';
-		text-align: center;
-		font-size: 1em;
-		line-height: 50px;
-	}
-
-	.fs-continue::after {
-		content: '';
+		font-size: 1.2em;
 	}
 
 	button.fs-submit {
 		width: 100%;
-		font-size: 1.25em;
+		font-size: 1em;
 	}
 
 	.fs-message-error {
 		bottom: 1.75em;
 		left: 0;
-		padding: 0 90px 0 2em;
+		padding: 0;
 		width: 100%;
-		font-size: 1.5em;
+		text-align: left;
+		font-size: 1.3em;
 		-webkit-transform: translate3d(0,-5px,0);
 		transform: translate3d(0,-5px,0);
 	}
