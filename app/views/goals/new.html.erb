@@ -8,12 +8,13 @@
 		<h2 id="overview-header" style="color: white;text-align: left; font-weight: 200; padding-bottom: 0; margin-bottom: 0;">Review your answers:</h2>
 		<ol class="fs-fields">
 			<li>
-				<h2 class="fs-field-label form-title fs-anim-upper" for="q1">What's your name?</h2>
-				<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Ferris Bueller" required/>
+				<h2 class="fs-field-label form-title fs-anim-upper" for="person[name]">What's your name?</h2>
+				<input class="fs-anim-lower" id="person[name]" name="person[name]" type="text" placeholder="Ferris Bueller" required/>
 			</li>
 			<li>
-				<h2 class="fs-field-label form-title fs-anim-upper" for="q1">What's your Goal?</h2>
-				<input class="fs-anim-lower" id="q1" name="q1" type="text" placeholder="Marathon" required/>
+				<h2 class="fs-field-label form-title fs-anim-upper" for="goal[type]">What's your Goal?</h2>
+				<p class="natural-text" style="width: 100%; text-align: left;">I am <select class="fs-anim-lower" id="goal[type]" name="q2">
+								<option value="alsdkfj">running a marathon</option></select>.</p>
 			</li>
 		</ol><!-- /fs-fields -->
 		<button class="fs-submit" type="submit">Send answers</button>
