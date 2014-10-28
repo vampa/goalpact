@@ -1,47 +1,38 @@
 // FONTS
 
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600)
-@import url(http://fonts.googleapis.com/css?family=Raleway:300,700,400)
-
-// ICON FONT FOR BUTTONS
-
-@font-face
-	font-family: ICONS
-	src: url('webfonts/fontello.eot'), url('webfonts/fontello.ttf') format('truetype'), url('webfonts/fontello.woff') format('woff'), url('webfonts/fontello.eot?#iefix') format('embedded-opentype')
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400)
 
 // CONTENT RESET STYLES
 
 li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td
-	list-style: none outside none
-	text-decoration: none
-	font-family: "Source Sans Pro", "Helvetica Neue", sans-serif
-	font-weight: 400
-	font-size: 1em
-	line-height: 1.5em
-	letter-spacing: .03em
-
-.icon
-	font-family: "ICONS"
-	width: auto
-	margin-right: 10px
+    font-family: "Proxima Nova", "Helvetica Neue", Verdana, Arial, sans-serif
+    font-size: 11pt
+    letter-spacing: .03em
+    list-style: none outside none
+    text-decoration: none
 
 // HEADERS
 
 h1, h2, h3, h4, h5, h6
-	font-family: "Raleway", "Helvetica", sans-serif
-	letter-spacing: 0
-	padding-bottom: 15px
-	width: 100%
+    font-family: "Proxima Nova", "Montserrat", "Helvetica Neue", Verdana, Arial, sans-serif
+    font-weight: 500
+    padding-bottom: .5em
+    width: 100%
 
-h1.page-content-header
-	color: white
-	font-weight: 600
-	font-size: 1.8em
-	text-align: left
+h1
+    font-size: 35pt
+h2
+    font-size: 28pt
+h3
+    font-size: 23pt
+h4
+    font-size: 18pt
+h5
+    font-size: 14pt  
 
-// PAGE ELEMENTS
+// SMALLER ELEMENTS
 
 a
-	font-weight: 200
-	text-decoration: none
-	color: $light-green
+    color: $link_color
+    &:hover
+        color: lighten($link_color, 10%)

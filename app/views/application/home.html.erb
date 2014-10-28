@@ -1,23 +1,7 @@
-<% if user_signed_in? %>
-	<% if current_user.first_name != nil %>
-		Welcome back, <%= user.full_name %>
-	<% end %>
-	<h2 class="list-header">Goals</h2>
-	<ul id="goals">
-		<li><a href="">CHICAGO MARATHON</a></li>
-		<li><a class="green" href="<%= new_goal_path %>"><span class="icon icon-plus"></span>NEW GOAL</a></li>
-	</ul>
-	<h2 class="list-header">
-		Pacts
-		<a class="right green" href="#">View All</a>
-	</h2>
-	<ul id="pacts">
-		<li><a href="">@John Doe<span class="right green">$50</span></a></li>
-		<li><a href="">@Dave Masterson<span class="right green">$5</span></a></li>
-	</ul>
-	
-	<div id="links-wrap">
-		<a href="<%= edit_user_registration_path %>">Account Settings</a>
-		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-	</div>
-<% end %>
+<h2>DASHBOARD</h2>
+
+<h4>Goal Performance</h4>
+<p>How much has been raised for goal, total pacts, visual representation of finish time to $ raised for which charity.</p>
+
+<h4 style="margin-top: 20px;">Pacts Made</h4>
+<p>If any, shows a list of people and goals you've made pacts with and total $ amounts.</p>

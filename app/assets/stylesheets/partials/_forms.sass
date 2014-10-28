@@ -1,131 +1,39 @@
 // FORMS
 
+form
+    float: left
+    width: 100%
+    fieldset.form-group, .form-group
+        width: 100%
+
+input
+    +roundedCorners()
+    margin-bottom: 15px
+    padding: 10px
+    width: 100%
+    &[type="checkbox"]
+        float: left
+        width: 15px
+    &[type="submit"]
+        clear: left
+        float: left
+        width: auto
+
 // LAYOUT & STRUCTURE
-
-form, form.pure-form
-	fieldset
-		padding-bottom: 1.2em
-	h2.form-title
-		padding-bottom: 0
-		text-align: left
-		font-weight: 600
-		color: lighten($light-blue, 35%)
-	input
-		width: 100%
-	.checkbox
-		width: 100%
-		text-align: right
-		padding-bottom: 20px
-		input
-			width: 20px
-			margin-left: 10px
-			margin-top: 7px
-			float: right
-		label
-			color: lighten($light-blue, 30%)
-			font-weight: 400
-			float: right
-			width: auto
-			margin: 0
-	p.hint
-		text-align: left
-		margin-top: -10px
-		padding-bottom: 20px
-		font-size: .9em
-		color: lighten($dark-blue, 30%)
-
-.fs-form-wrap
-	position: relative
-	width: 100%
-	.fs-form-full
-		width: 100%
-		padding: 0
-		.fs-fields
-			height: 150px
-			width: 100%
-			li
-				padding-top: 55px
-				width: 100%
-				.form-title
-					font-size: 1.2em
-					padding-bottom: 10px
-				input.fs-anim-lower
-					width: 100%
-					font-size: .95em
-					background: white
-					color: #242424
-				span.natural-text
-					color: white
-					font-size: 1.3em
-					select, input
-						margin: 0 5px
-					input[type="radio"]
-						float: left
-						width: auto
-						margin-right: 10px
-						margin-top: 7px
-#form-controls-wrap
-	width: 100%
-	.fs-controls
-		float: left
-		clear: left
-		.fs-nav-dots
-			display: none
-		button.fs-continue
-			clear: both
-			width: 100%
-			float: right
-
-.fs-form-overview
-	.fs-fields
-		li
-			input
-				border: none
-				box-shadow: none
-				padding: .5em 0
-				background-image: none
-				color: white
-				&:active, &:focus
-					border: none
-					background: white
-					margin-top: .2em
-					padding: .3em .5em
-					color: #242424
-			p.natural-text
-				color: white
-				font-size: 1.3em
-				select, input
-					margin: 0 5px
-	.fs-submit
-		width: 100%
-
-#links-wrap
-	padding-top: 10px
-	clear: left
-	text-align: left
-	width: 90%
-	max-width: 400px
-	margin: 0 auto
-	float: none
-	a
-		padding-top: 15px
-		padding-bottom: 0px
-		float: left
-		clear: left
-		width: 100%
 
 // BUTTONS
 
 a.button, input[type="button"], input[type="submit"], button.fs-continue, button.fs-submit
-	font-family: "Raleway", "Helvetica", sans-serif
-	font-weight: 300
-	text-transform: uppercase
-	text-align: center
-	padding: 10px 15px
-	background-color: $light-blue
-	color: white
-	border: 1px solid $lighter-blue
-	+roundedCorners(2px)
-	&:hover
-		background-color: darken($light-blue, 3.5%)
-		border-color: darken($lighter-blue, 3.5%)
+    +roundedCorners(2px)
+    background-color: $light-blue
+    border: 1px solid $lighter-blue
+    color: white
+    font-family: "Raleway", "Helvetica", sans-serif
+    font-weight: 300
+    padding: 10px 25px
+    text-transform: uppercase
+    text-align: center
+    &:hover
+        background-color: darken($light-blue, 3.5%)
+        border-color: darken($lighter-blue, 3.5%)
+        cursor: pointer

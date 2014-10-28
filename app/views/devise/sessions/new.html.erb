@@ -1,21 +1,21 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "pure-form"}) do |f| %>
+	<h2 class="form-title">S<span class="small-caps">ign in</span></h2>
 
-	<h2 class="form-title">Sign in </h2>
-	<fieldset class="pure-group">
-  	<%= f.email_field :email, autofocus: true, placeholder: "email@example.com" %>
-	  <%= f.password_field :password, autocomplete: "off", placeholder: "password" %>
-	 </fieldset>
+	<fieldset class="form-group">
+        <%= f.email_field :email, autofocus: true, placeholder: "email@example.com" %>
+        <%= f.password_field :password, autocomplete: "off", placeholder: "password" %>
+    </fieldset>
+    
+    <% if devise_mapping.rememberable? -%>
+        <div class="checkbox">
+    	    <%= f.check_box :remember_me %>
+    	    <%= f.label :remember_me %>
+        </div>
+    <% end -%>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="checkbox">
-    	<%= f.check_box :remember_me %>
-    	<%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div><%= f.submit "Log in" %></div>
+    <div class="form-group"><%= f.submit "Log in" %></div>
 <% end %>
 
 <div id="links-wrap">
-	<%= render "devise/shared/links" %>
+    <%= render "devise/shared/links" %>
 </div>

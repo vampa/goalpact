@@ -1,44 +1,79 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
+<!DOCTYPE <!doctype html>
+<html lang="en">
 <head>
-  <title>GoalPact | Ripples Affect Us</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Goal Pact</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<% if !current_user %>
+    <body class="login">
+<% else %>
+    <body>
+<% end %>
+    <% if current_user %>
+        <section id="sidebar-wrap">
+            <a id="logo">
+                G<span class="small-caps">OAL</span> 
+                P<span class="small-caps">ACT</span>
+            </a>
+            <h4 class="list-header">Goals</h4>
+            <ul id="goals-list">
+                <li class="goal">
+                    <a href="#">Chicago Marathon</a>
+                </li>
+            </ul>
+            <a href="#" class="new-goal">+ Set New Goal</a>
+            <p class="divider"></p>
+            <h4 class="list-header">Pacts</h4>
+            <ul id="pacts-list">
+            <li class="pact">
+                <a href="#">John Doe</a>
+                <span class="right">$30</span>
+            </li>
+            <li class="pact">
+                <a href="#">Adi Malik</a>
+                <span class="right">$50</span>
+            </li>
+            </ul>
+            <a href="#" class="new-pact">+ Discover Goals</a>
+            <div id="user-wrap">
+                <h5>Welcome back, Alex</h5>
+                <%= link_to("Logout", destroy_user_session_path, :method => "delete") %>
+            </div>
+        </section>
 
-  <div id="header-wrapper">
-    <% if page_title == false %>
-      <a href="<%= root_path %>" id="logo">
-        <h1>GOAL <span>+ PACT</span></h1>
-      </a>
+        <section id="content-wrap">
+            <% if notice %>
+                <p class="notice">
+                    <span class="name">NOTICE</span>
+                    <span class="message"><%= notice %></span>
+                </p>
+            <% end %>
+
+            <% if alert %>
+                <p class="alert">
+                    <span class="name">ALERT</span>
+                    <span class="message"><%= alert %></span>
+                </p>
+            <% end %>
+
+            <div id="content">
+                <%= yield %>
+            </div>
+        </section>
     <% else %>
-      <a id="logo">
-        <h1>G<span>P</span> | <%= page_title %></h1>
-      </a>
+        <div id="center-wrap">
+            <a href="<%= root_path %>" id="logo">
+                G<span class="small-caps">OAL</span> 
+                P<span class="small-caps">ACT</span>
+            </a>
+            <section id="login-wrap">
+                <%= yield %>
+            </section>
+        </div>
     <% end %>
-  </div>
-
-  <% if notice %>
-    <p class="notice">
-      <span class="name">NOTICE</span>
-      <span class="message"><%= notice %></span>
-    </p>
-  <% end %>
-
-  <% if alert %>
-    <p class="alert">
-      <span class="name">ALERT</span>
-      <span class="message"><%= alert %></span>
-    </p>
-  <% end %>
-
-  <div id="content">
-    <%= yield %>
-  </div>
-
 </body>
 </html>
