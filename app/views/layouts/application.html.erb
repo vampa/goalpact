@@ -15,7 +15,7 @@
 <% end %>
     <% if current_user %>
         <section id="sidebar-wrap">
-            <a id="logo">
+            <a href="#" id="logo">
                 G<span class="small-caps">OAL</span> 
                 P<span class="small-caps">ACT</span>
             </a>
@@ -46,17 +46,13 @@
         </section>
 
         <section id="content-wrap">
-            <% if notice %>
-                <p class="notice">
-                    <span class="name">NOTICE</span>
-                    <span class="message"><%= notice %></span>
-                </p>
-            <% end %>
-
-            <% if alert %>
+            <% if notice || alert %>
                 <p class="alert">
-                    <span class="name">ALERT</span>
-                    <span class="message"><%= alert %></span>
+                    <% if notice %>
+                        <span class="message"><%= notice %></span>
+                    <% elsif alert %>
+                        <span class="message"><%= alert %></span>
+                    <% end %>
                 </p>
             <% end %>
 

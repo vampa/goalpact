@@ -6,6 +6,8 @@ gem 'rails', '4.1.4'
 gem 'pg'
 gem 'thin'
 
+gem 'newrelic_rpm'
+
 gem 'devise'
 
 gem 'sass-rails', '~> 4.0.3'
