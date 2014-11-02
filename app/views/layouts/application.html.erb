@@ -8,68 +8,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<% if !current_user %>
-    <body class="login">
-<% else %>
-    <body>
-<% end %>
-    <% if current_user %>
-        <section id="sidebar-wrap">
-            <a href="#" id="logo">
-                G<span class="small-caps">OAL</span> 
-                P<span class="small-caps">ACT</span>
-            </a>
-            <h4 class="list-header">Goals</h4>
-            <ul id="goals-list">
-                <li class="goal">
-                    <a href="#">Chicago Marathon</a>
-                </li>
-            </ul>
-            <a href="#" class="new-goal">+ Set New Goal</a>
-            <p class="divider"></p>
-            <h4 class="list-header">Pacts</h4>
-            <ul id="pacts-list">
-            <li class="pact">
-                <a href="#">John Doe</a>
-                <span class="right">$30</span>
-            </li>
-            <li class="pact">
-                <a href="#">Adi Malik</a>
-                <span class="right">$50</span>
-            </li>
-            </ul>
-            <a href="#" class="new-pact">+ Discover Goals</a>
-            <div id="user-wrap">
-                <h5>Welcome back, Alex</h5>
-                <%= link_to("Logout", destroy_user_session_path, :method => "delete") %>
-            </div>
-        </section>
+<body id="landing">
+    <div id="center-wrap">
+        <a href="<%= root_path %>" id="logo">
+            G<span class="small-caps">OAL</span> 
+            P<span class="small-caps">ACT</span>
+        </a>
 
         <section id="content-wrap">
-            <% if notice || alert %>
-                <p class="alert">
-                    <% if notice %>
-                        <span class="message"><%= notice %></span>
-                    <% elsif alert %>
-                        <span class="message"><%= alert %></span>
-                    <% end %>
-                </p>
-            <% end %>
-
-            <div id="content">
-                <%= yield %>
-            </div>
+            <%= yield %>
         </section>
-    <% else %>
-        <div id="center-wrap">
-            <a href="<%= root_path %>" id="logo">
-                G<span class="small-caps">OAL</span> 
-                P<span class="small-caps">ACT</span>
-            </a>
-            <section id="login-wrap">
-                <%= yield %>
-            </section>
-        </div>
-    <% end %>
+    </div>
 </body>
 </html>

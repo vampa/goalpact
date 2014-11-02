@@ -1,7 +1,15 @@
-<h2>DASHBOARD</h2>
+<h2>LANDING PAGE</h2>
 
-<h4>Goal Performance</h4>
-<p>How much has been raised for goal, total pacts, visual representation of finish time to $ raised for which charity.</p>
+<%= form_for(:user, :url => session_path(:user)) do |f| %>
+  <%= f.text_field :email %>
+  <%= f.password_field :password %>
+  <%= f.check_box :remember_me %>
+  <%= f.label :remember_me %>
+  <%= f.submit 'Sign in' %>
+  <%= link_to "Forgot your password?", new_password_path(:user) %>
+<% end %>
 
-<h4 style="margin-top: 20px;">Pacts Made</h4>
-<p>If any, shows a list of people and goals you've made pacts with and total $ amounts.</p>
+<% if current_user %>
+    <p><%= current_user.first_name %></p>
+    <%= link_to("Logout", destroy_user_session_path, :method => "delete") %>
+<% end %>

@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   
   root 'application#home'
 
+  get "dashboard" => "application#dashboard", :as => :dashboard
+
 end

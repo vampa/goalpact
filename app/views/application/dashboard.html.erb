@@ -1,0 +1,19 @@
+<% if notice || alert %>
+    <p class="alert">
+        <% if notice %>
+            <span class="message"><%= notice %></span>
+        <% elsif alert %>
+            <span class="message"><%= alert %></span>
+        <% end %>
+    </p>
+<% end %>
+
+<div id="content">
+    <h2>DASHBOARD</h2>
+
+    <h4>Goal Performance</h4>
+    <p>How much has been raised for goal, total pacts, visual representation of finish time to $ raised for which charity.</p>
+
+    <h4 style="margin-top: 20px;">Pacts Made</h4>
+    <p>If any, shows a list of people and goals you've made pacts with and total $ amounts.</p>
+</div>
