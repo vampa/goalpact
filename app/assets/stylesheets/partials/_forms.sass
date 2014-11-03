@@ -24,19 +24,66 @@ input
 
 // LAYOUT & STRUCTURE
 
-// BUTTONS
+// BUTTON
 
-a.button, input[type="button"], input[type="submit"], button.fs-continue, button.fs-submit
-    +roundedCorners(2px)
-    background-color: $light-blue
-    border: 1px solid $lighter-blue
-    color: white
-    font-family: "Raleway", "Helvetica", sans-serif
-    font-weight: 300
-    padding: 10px 25px
+button, a.button, input[type="button"], input[type="submit"]
+    +shadow(inset 0px 1px 1px rgba(255, 255, 255, .5))
+    +backgroundGradient(lighten($light_grey, 3%), $light_grey)
+    background-color: white
+    border: 1px solid darken($light_grey, 5%)
+    border-bottom: 2px solid darken($light_grey, 5%)
+    border-radius: 3px
+    color: #333
+    cursor: pointer
+    font-weight: 400
+    font-size: 15px
+    padding: 10px 20px 7px 20px
     text-transform: uppercase
-    text-align: center
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8)
     &:hover
-        background-color: darken($light-blue, 3.5%)
-        border-color: darken($lighter-blue, 3.5%)
-        cursor: pointer
+        +shadow(inset 0px 1px 0px rgba(255, 255, 255, .3))
+        +backgroundGradient(lighten($light_grey, 3%), darken($light_grey, 5%))
+    &.accent
+        +text-shadow(1px 1px $blue)
+        +backgroundGradient(lighten($highlight_color, 3%), $highlight_color)
+        border: 1px solid darken($highlight_color, 5%)
+        border-bottom: 2px solid darken($highlight_color, 5%)
+        border-top: 0
+        color: lighten($light_blue, 25%)
+        &:hover
+            +backgroundGradient(darken($highlight_color, 3%), darken($highlight_color, 10%))
+            color: white
+
+// SMALL BUTTON
+
+button.small-button, a.small-button, input[type="submit"].small-button
+    +backgroundGradient(lighten($light_grey, 3%), $light_grey)
+    +roundedCorners(3px)
+    +shadow(inset 0px 1px 1px rgba(255, 255, 255, .5))
+    background-color: white
+    border: 1px solid darken($light_grey, 5%)
+    border-bottom: 2px solid darken($light_grey, 5%)
+    color: #333
+    cursor: pointer
+    font-family: "Proxima Nova", "Montserrat", "Helvetica Neue", Verdana, Arial, sans-serif
+    font-size: 10px
+    font-weight: 600
+    letter-spacing: .075em
+    line-height: 10pt
+    padding: 8px 15px 7px 15px
+    text-transform: uppercase
+    span.icon
+        font-size: 13px
+        padding-right: 10px
+    &:hover
+        +shadow(inset 0px 1px 0px rgba(255, 255, 255, .3))
+        +backgroundGradient(lighten($light_grey, 3%), darken($light_grey, 5%))
+    &.accent
+        +backgroundGradient(lighten($highlight-color, 15%), lighten($highlight-color, 5%))
+        border: 1px solid $highlight-color
+        border-bottom: 2px solid darken($highlight-color, 5%)
+        color: darken($highlight-color, 30%)
+        text-shadow: none
+        &:hover
+            +shadow(inset 0px 1px 0px rgba(255, 255, 255, .3))
+            +backgroundGradient(lighten($highlight-color, 10%), $highlight-color)

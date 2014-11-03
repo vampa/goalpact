@@ -1,19 +1,18 @@
 <!DOCTYPE <!doctype html>
-<html lang="en">
+<html lang="en" id="dash">
 <head>
-    <title>Goal Pact</title>
+    <title>Goal Pact | Dashboard</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body id="dash">
+<body>
     <% if current_user %>
         <section id="sidebar-wrap">
             <a href="#" id="logo">
-                G<span class="small-caps">OAL</span> 
-                P<span class="small-caps">ACT</span>
+                <img src="<%= asset_path('dark_logo.png') %>" />
             </a>
             <h4 class="list-header">Goals</h4>
             <ul id="goals-list">
@@ -48,7 +47,7 @@
             P<span class="small-caps">ACT</span>
         </a>
 
-        <section id="content-wrap">
+        <section id="dash-wrap">
             <%= yield %>
         </section>
     </div>

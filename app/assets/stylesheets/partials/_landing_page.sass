@@ -1,0 +1,106 @@
+// HEADER
+
+.center-wrap
+    margin: 0 auto
+    position: relative
+    max-width: 1170px
+    width: 100%
+
+.header-wrap
+    background: white
+    border-bottom: 5px solid $green
+    height: 80px
+    padding: 20px 25px
+    position: fixed
+    width: 100%
+    z-index: 1000
+    .center-wrap
+        a#logo
+            img
+                height: 35px
+        ol.navigation
+            position: absolute
+            right: 25px
+            top: 2px
+            li
+                float: left
+                height: 100%
+                padding: 8px 0 8px 35px
+                &:first-child
+                    padding-left: 0
+                a
+                    color: #333333
+                    font-weight: 200
+                    &:hover
+                        color: $light-blue
+#content-wrap
+    position: relative
+    top: 80px
+    width: 100%
+    z-index: 500
+    .login-wrap
+        display: none
+    .welcome-banner
+        background-image: url(asset_path('shoes.jpg'))
+        background-position: center
+        background-size: cover
+        height: 650px
+        padding: 150px 0
+        position: relative
+        text-align: center
+        width: 100%
+        .slogan
+            color: white
+            font-weight: 700
+            line-height: 1.5em
+            padding-bottom: 75px
+            text-align: center
+            text-transform: uppercase
+            width: 100%
+        .button
+            font-size: 1.2em
+            font-weight: 200
+        .total-counter
+            +shadow(0px -1px 6px 0px #272729)
+            background: url(asset_path('bg_pattern.png')) $black
+            bottom: 0
+            height: 100px
+            padding: 25px
+            position: absolute
+            width: 100%
+            .counter
+                color: white
+                font-size: 2em
+                padding: 10px 0
+                .blue
+                    font-weight: 100
+                    padding: 0 15px
+    section
+        background: white
+        float: left
+        padding: 50px 25px
+        width: 100%
+        &.gap
+            background: url(asset_path('maze.png')) transparent
+            height: 150px
+        .center-wrap
+            padding: 20px 25px
+            text-align: center
+            .section-header
+                background: white
+                display: table
+                font-weight: 800
+                margin: 0 auto
+                padding: 0 15px
+                width: auto
+            .section-header-line
+                border-top: 1px solid $light_grey
+                height: 1px
+                margin: 0 auto -25px auto
+                width: 600px
+            .content-wrap
+                text-align: left
+                padding: 20px 0
+                width: 100%
+    .about
+

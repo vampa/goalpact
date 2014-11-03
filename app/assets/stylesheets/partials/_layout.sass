@@ -7,7 +7,6 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
     outline: 0
     vertical-align: baseline
     list-style: none outside none
-    float: left
 
 *, *:before, *:after
     -webkit-box-sizing: border-box
@@ -22,28 +21,17 @@ html, body
 
 html
     background: white
+    background: url(asset_path('bg.png')) fixed white
     height: 100%
 
-body#landing
-    background: url(asset_path('bg.png')) white
-
-body#dashboard
+html#dash
     background: white
-
-#sidebar-wrap
-    min-height: 100%
-    position: fixed
-    width: 300px
-    y-overflow: scroll
-
-#content-wrap
-    min-height: 100%
-    position: absolute
-    right: 0
-    width: calc(100% - 300px)
 
 .right
     float: right
+
+.blue
+    color: $light_blue
 
 .small-caps
     float: none
@@ -64,7 +52,7 @@ p.notice, p.alert
 // SIDEBAR
 
 #sidebar-wrap
-    background: url(asset_path('bg_pattern.png')) #353535
+    background: url(asset_path('bg_pattern.png')) $black
     color: white
     padding: 15px
     a
@@ -105,42 +93,3 @@ p.notice, p.alert
         padding: 25px
         position: absolute
         width: 100%
-
-// CONTENT
-
-#content-wrap
-    padding: 25px
-
-// LOGIN
-
-body.login
-    #center-wrap
-        float: none
-        margin: 0 auto
-        max-width: 600px
-        padding-top: 50px
-        text-align: center
-        width: 100%
-        #logo
-            float: none
-            color: white
-            font-size: 2.5em
-            margin: 25px auto
-            text-align: center
-        #login-wrap
-            +roundedCorners()
-            +shadow(0 0 3px 1px #454545)
-            background: url(asset_path('bg_pattern.png')) #353535
-            color: white
-            float: left
-            padding: 25px
-            margin: 50px 10%
-            max-width: 500px
-            text-align: left
-            width: 80%
-            input
-                border: none
-            a
-                color: #a7a7a9
-                &:hover
-                    color: white
