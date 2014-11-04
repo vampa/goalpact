@@ -42,6 +42,7 @@
         +shadow(0 0 5px 1px $black)
         +roundedCorners()
         background: url(asset_path('bg_pattern.png')) $black
+        display: none
         padding: 25px
         position: fixed
         top: calc(50% - 165px)
@@ -51,6 +52,12 @@
         z-index: 1000
         h3, label
             color: white
+            a.right
+                color: #878789
+                font-size: 1em
+                font-weight: 400
+                &:hover
+                    color: white
         a.form-footer-link
             width: 100%
     .welcome-banner

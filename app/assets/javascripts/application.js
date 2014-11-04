@@ -21,7 +21,7 @@ $(document).ready(function() {
 	$('.alert').delay(3200).fadeOut();
 
     $('.js-login').click(function() {
-      $('.js-login-wrap').toggle();
+      $('.js-login-wrap').show();
     });
 
     $('.js-close-login-form').click(function() {
