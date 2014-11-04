@@ -1,18 +1,19 @@
-<div class="login-wrap">
+<div class="login-wrap js-login-wrap" style="display: none;">
+    <h3>Login<a href="#" class="right js-close-login-form">X</a></h3>
     <%= form_for(:user, :url => session_path(:user)) do |f| %>
-      <%= f.text_field :email %>
-      <%= f.password_field :password %>
+      <%= f.text_field :email, :placeholder => "your@email.com" %>
+      <%= f.password_field :password, :placeholder => "password" %>
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
-      <%= f.submit 'Sign in' %>
-      <%= link_to "Forgot your password?", new_password_path(:user) %>
+      <%= f.submit 'Sign in', :class => "accent" %>
     <% end %>
+    <%= link_to "Forgot your password?", new_password_path(:user), :class => "form-footer-link" %>
 </div>
 
 <section class="welcome-banner">
     <h1 class="slogan">Helping the <span class="blue">World?<br />Let us help </span>you!</h1>
     <a class="button accent" href="#">Create An Account</a>
-    <div class="total-counter">
+    <div id="about" class="total-counter">
         <h1 class="counter">$ 12,321,214<span class="blue">RAISED FOR</span>735<span class="blue">CHARITIES</span></h1>
     </div>
 </section>
@@ -42,7 +43,7 @@
     </div>
 </section>
 
-<section class="gap"></section>
+<section id="charities" class="gap"></section>
 
 <section class="charities">
     <div class="center-wrap">
@@ -111,7 +112,7 @@
     </div>
 </section>
 
-<section class="gap"></section>
+<section id="contact" class="gap"></section>
 
 <section class="contact">
     <!-- LINK TO contact@vampa.org -->

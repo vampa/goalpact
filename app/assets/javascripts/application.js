@@ -20,4 +20,12 @@ $(document).ready(function() {
 	$('.notice').delay(3200).fadeOut();
 	$('.alert').delay(3200).fadeOut();
 
+    $('.js-login').click(function() {
+      $('.js-login-wrap').toggle();
+    });
+
+    $('.js-close-login-form').click(function() {
+      $('.js-login-wrap').hide();
+    });
+
 });
