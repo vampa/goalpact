@@ -27,8 +27,7 @@ input
 // BUTTON
 
 button, a.button, input[type="button"], input[type="submit"]
-    +shadow(inset 0px 1px 1px rgba(255, 255, 255, .5))
-    +backgroundGradient(lighten($light_grey, 3%), $light_grey)
+    +backgroundGradient(lighten($highlight_color, 3%), $highlight_color)
     background-color: white
     border: 1px solid darken($light_grey, 5%)
     border-bottom: 2px solid darken($light_grey, 5%)
@@ -45,13 +44,13 @@ button, a.button, input[type="button"], input[type="submit"]
         +backgroundGradient(lighten($light_grey, 3%), darken($light_grey, 5%))
     &.accent
         +text-shadow(1px 1px $blue)
-        +backgroundGradient(lighten($highlight_color, 3%), $highlight_color)
+        +backgroundGradient(darken($highlight_color, 3%), darken($highlight_color, 10%))
         border: 1px solid darken($highlight_color, 5%)
         border-bottom: 2px solid darken($highlight_color, 5%)
         border-top: 0
         color: lighten($light_blue, 25%)
         &:hover
-            +backgroundGradient(darken($highlight_color, 3%), darken($highlight_color, 10%))
+            +backgroundGradient(darken($highlight_color, 5%), darken($highlight_color, 15%))
             color: white
 
 // SMALL BUTTON
