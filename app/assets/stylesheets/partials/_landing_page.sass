@@ -35,7 +35,7 @@
                         color: $light-blue
 #content-wrap
     position: relative
-    top: 80px
+    top: 0
     width: 100%
     z-index: 500
     .login-wrap
@@ -64,23 +64,26 @@
         background-image: url(asset_path('shoes.jpg'))
         background-position: center
         background-size: cover
-        height: 650px
-        padding: 150px 0
+        height: 100%
+        max-height: 730px
+        padding: 0
         position: relative
         text-align: center
-        width: 100%
-        .slogan
-            +text-shadow(1px 2px 10px $dark_green)
-            color: white
-            font-weight: 700
-            line-height: 1.5em
-            padding-bottom: 75px
-            text-align: center
-            text-transform: uppercase
-            width: 100%
-        .button
-            font-size: 1.2em
-            font-weight: 200
+        .overlay-text-wrapper
+            +transform(translateY(-50%))
+            position: relative
+            top: 50%
+            .slogan
+                +text-shadow(1px 1px 5px darken($dark_green, 5%))
+                color: white
+                font-weight: 700
+                line-height: 1.5em
+                padding-bottom: 50px
+                text-align: center
+                text-transform: uppercase
+            .button
+                font-size: 1.2em
+                font-weight: 200
         .total-counter
             +shadow(0px -1px 6px 0px #272729)
             background: url(asset_path('bg_pattern.png')) $black
