@@ -1,13 +1,80 @@
-// LAYOUT
+// SIDEBAR
 
 #sidebar-wrap
+    background: url(asset_path('bg_pattern.png')) $black
+    color: white
     min-height: 100%
+    padding: 15px
     position: fixed
     width: 300px
     y-overflow: scroll
+    a
+        color: #a7a7a9
+        &:hover
+            color: white
+    #logo
+        color: white
+        float: left
+        font-size: 2em
+        padding: 0 0 15px 0
+        text-align: center
+        width: 100%
+        img
+            height: 40px
+    .list-header
+        color: #676769
+        font-size: .8em
+        text-transform: uppercase
+        width: 100%
+    #goals-list, #pacts-list
+        width: 100%
+        li
+            padding: 10px 0
+            width: 100%
+            a
+                color: #b7b7b9
+                &:hover
+                    color: white
+    .divider
+        border-top: 1px solid #474749
+        margin: 20px 0
+        width: 100%
+    .new-goal, .new-pact
+        color: white
+        margin-top: 10px
+    #user-wrap
+        bottom: 0
+        left: 0
+        padding: 25px
+        position: absolute
+        width: 100%
+
+// LAYOUT
 
 #dash-wrap
+    float: right
     min-height: 100%
-    position: absolute
-    right: 0
+    padding: 25px
+    position: relative
     width: calc(100% - 300px)
+    #content
+        float: left
+        padding-right: 25px
+        width: 75%
+    #activity
+        float: left
+        width: 25%
+
+// COMMON CLASSES
+
+.panel
+    margin-bottom: 25px
+    h4.panel-header
+        border-bottom: 1px solid #d7d7d9
+        font-size: 1em
+        padding-bottom: 5px
+        margin-bottom: 10px
+
+
+
+// CONTENT
