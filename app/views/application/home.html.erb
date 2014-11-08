@@ -1,5 +1,5 @@
 <div class="login-wrap js-login-wrap">
-    <h3>Login<a class="right js-close-login-form">x</a></h3>
+    <h3>Login<a class="right js-close-login-form"><i class="icon-close"></i></a></h3>
     <%= form_for(:user, :url => session_path(:user)) do |f| %>
       <%= f.text_field :email, :placeholder => "your@email.com" %>
       <%= f.password_field :password, :placeholder => "password" %>

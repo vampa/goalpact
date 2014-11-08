@@ -6,6 +6,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
 
+    <link rel="stylesheet" href="http://i.icomoon.io/public/temp/536578d84e/VAMPA/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -19,7 +20,7 @@
                 <a href="#">Chicago Marathon</a>
             </li>
         </ul>
-        <a href="#" class="new-goal">+ Set New Goal</a>
+        <a href="<%= new_goal_path %>" class="new-goal">+ Set New Goal</a>
         <p class="divider"></p>
         <h4 class="list-header">Pacts</h4>
         <ul id="pacts-list">
