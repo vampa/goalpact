@@ -40,26 +40,23 @@
     width: 100%
     z-index: 500
     .login-wrap
-        +shadow(0 0 5px 1px $black)
-        +roundedCorners()
-        background: url(asset_path('bg_pattern.png')) $black
-        display: none
-        padding: 25px
-        position: fixed
-        top: calc(50% - 165px)
-        left: calc(50% - 275px)
-        width: 550px
-        height: 330px
-        z-index: 1000
+        h3
+            float: left
+            margin-bottom: 10px
+            width: 100%
         h3, label
-            color: white
+            color: #575759
             line-height: 1em
             a.right
                 color: #878789
+                padding-top: 5px
                 i
                     font-size: .9em
                 &:hover
-                    color: white
+                    color: $black
+        label
+            float: left
+            margin-top: 2px
         a.form-footer-link
             width: 100%
     .welcome-banner
@@ -76,12 +73,12 @@
             position: relative
             top: 50%
             .slogan
-                +text-shadow(1px 1px 5px darken($dark_green, 5%))
+                +text-shadow(1px 1px 2px darken($dark_green, 7%))
                 color: white
-                font-size: 3em
+                font-size: 3.2em
                 font-weight: 100
                 line-height: 1.3em
-                padding-bottom: 50px
+                padding-bottom: 1em
                 text-align: center
             .button
                 font-size: 1.2em

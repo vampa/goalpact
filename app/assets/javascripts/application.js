@@ -17,15 +17,20 @@
 
 $(document).ready(function() {
 
+    // hide notifications after 3 seconds
 	$('.notice').delay(3200).fadeOut();
 	$('.alert').delay(3200).fadeOut();
 
-    $('.js-login').click(function() {
+    // show login form
+    $('.js-login').bind('click', function() {
       $('.js-login-wrap').show();
+      $('input#login-email').focus();
     });
 
-    $('.js-close-login-form').click(function() {
-      $('.js-login-wrap').hide();
+    // hide modal by clicking outside of it or on the close-modal icon
+    $('.modal').click(function(e) {
+        if(!$(e.target).parents('.modal').length > 0 || $(e.target).parents('.close-modal').length > 0) {
+            $(this).hide();
+        }
     });
-
 });

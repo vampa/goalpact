@@ -51,3 +51,24 @@ p.notice, p.alert
     &.notice
         background: #2980B9
         color: lighten(#CF0000, 55%)
+
+// MODALS
+
+.modal
+    background: rgba(0,0,0,.3)
+    display: none
+    height: 100%
+    position: fixed
+    width: 100%
+    z-index: 1000
+    .modal-content
+        +roundedCorners()
+        +shadow(0 0 3px 0 $black)
+        +transform(translateY(-50%))
+        background: url(asset_path('bg_pattern.png')) #f7f7f9
+        left: calc(50% - 275px)
+        padding: 25px
+        position: fixed
+        top: calc(50%)
+        width: 550px
+        z-index: 1050
