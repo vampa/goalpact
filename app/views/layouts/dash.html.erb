@@ -16,11 +16,14 @@
         </a>
         <h4 class="list-header">Goals</h4>
         <ul id="goals-list">
-            <li class="goal">
+            <!-- <li class="goal">
                 <a href="#">Chicago Marathon</a>
+            </li> -->
+            <li class="goal">
+                <em>No goals yet!</em>
             </li>
         </ul>
-        <a href="<%= new_goal_path %>" class="new-goal">+ Set New Goal</a>
+        <a href="<%= new_goal_path %>" class="new-goal">+ New Goal</a>
         <p class="divider"></p>
         <h4 class="list-header">Pacts</h4>
         <ul id="pacts-list">
@@ -33,7 +36,7 @@
             <span class="right">$50</span>
         </li>
         </ul>
-        <a href="#" class="new-pact">+ Discover Goals</a>
+        <a href="#" class="new-pact">+ Explore Goals</a>
         <div id="user-wrap">
             <h5>Welcome back, Alex</h5>
             <%= link_to("Logout", destroy_user_session_path, :method => "delete") %>

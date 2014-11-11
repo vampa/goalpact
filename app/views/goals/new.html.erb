@@ -1,8 +1,49 @@
-<h1>Tell us about your goal!</h1>
+<%= form_for(create_goal_path, html: {id: "new-goal", autocomplete: "off", :class => "form"}) do |f| %>
+    <div class="form-section">
+        <h4 class="form-section-header">Let's get started! What's your goal?</h4>
+        <div class="form-line">
+            <p>I am</p>
+            <select >
+                <option>running a marathon</option>
+            </select>
+            <p>for</p>
+            <select>
+                <option>Greenpeace</option>
+            </select>
+        </div>
+    </div>
 
-<%= form_for(create_goal_path, html: {id: "new-goal", autocomplete: "off" }) do |f| %>
-	<p>First things first, what is your goal?</p>
-	<h4>I am [RUNNING A MARATHON] for [GREENPEACE]!</h4>
+    <div class="form-section">
+        <h4 class="form-section-header">Tell us about the race.</h4>
+        <div class="form-line">
+            <p>It's happening on</p>
+            <input value="10/12/2015"/>
+            <p>in</p>
+            <input placeholder="Chicago, IL"/>
+        </div>
+    </div>
 
+    <div class="form-section">
+        <h4 class="form-section-header">Enter a description for your goal.</h4>
+        <p>This will be displayed to everyone who comes to donate to your fundraiser. Tell them about yourself, and what is driving you to cross the finish line!</p>
+        <textarea></textarea>
+    </div>
 
+    <div class="form-section">
+        <h4 class="form-section-header">Have you done this before?</h4>
+        <p>Skip this section if you haven't, but if you have, enter your previous times.</p>
+        <textarea></textarea>
+    </div>
+    <div class="form-section">
+        <h4 class="form-section-header">What is your target time for this race?</h4>
+        <textarea></textarea>
+    </div>
+
+    <div class="form-section">
+        <h4 class="form-section-header">Enter your personal info.</h4>
+        <p>Only your name will be visible to the public.</p>
+        <textarea></textarea>
+
+        <button class="button accent">Continue</button>
+    </div>
 <% end %>

@@ -11,7 +11,7 @@
     a
         color: #a7a7a9
         &:hover
-            color: white
+            color: $blue
     #logo
         color: white
         float: left
@@ -22,7 +22,7 @@
         img
             height: 40px
     .list-header
-        color: #676769
+        color: lighten($black, 20%)
         font-size: .8em
         text-transform: uppercase
         width: 100%
@@ -32,9 +32,11 @@
             padding: 10px 0
             width: 100%
             a
-                color: #b7b7b9
+                color: lighten($black, 40%)
                 &:hover
                     color: white
+            em
+                color: lighten($black, 40%)
     .divider
         border-top: 1px solid #474749
         margin: 20px 0
