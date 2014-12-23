@@ -11,19 +11,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922014456) do
+ActiveRecord::Schema.define(version: 20141120004016) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "charges", force: true do |t|
+    t.integer  "amount"
+    t.integer  "user_id"
+    t.integer  "goal_id"
+    t.integer  "charity_id"
+    t.string   "transaction"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "goals", force: true do |t|
     t.integer  "type"
     t.string   "name"
-    t.string   "message"
     t.datetime "event_date"
     t.integer  "charity_id"
-    t.integer  "person_id"
     t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "event_city"
+    t.string   "event_state"
+    t.text     "description"
+    t.boolean  "first_time"
+    t.integer  "target_time"
+    t.integer  "step"
+  end
+
+  create_table "pact_charges", force: true do |t|
+    t.integer  "pact_id"
+    t.integer  "charge_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pacts", force: true do |t|
+    t.integer  "amount"
+    t.integer  "type"
+    t.integer  "target"
+    t.integer  "goal_id"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "results", force: true do |t|
+    t.integer  "time"
+    t.integer  "month"
+    t.integer  "year"
+    t.boolean  "previous"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

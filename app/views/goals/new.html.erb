@@ -1,53 +1,21 @@
-<%= form_for(create_goal_path, html: {id: "new-goal", autocomplete: "off", :class => "form"}) do |f| %>
+<%= form_for('/goals/create', html: {id: "new-goal", autocomplete: "off", :class => "form"}) do |f| %>
     <div class="form-section">
         <h4 class="form-section-header">Let's get started! What's your goal?</h4>
         <div class="form-line">
-            <p class="note">I am</p>
-            <select>
-                <option>running a marathon</option>
+            <p class="note">I am </p>
+            <select id="type">
+                <option value="1" default="default">running a marathon</option>
+                <option value="2">running a half-marathon</option>
+                <option value="3">running a 5K</option>
+                <option value="4">doing an Iron Man</option>
+                <option value="4">doing a triathlon</option>
+                <option value="5">other</option>
             </select>
             <p class="note">for</p>
-            <select>
-                <option>Greenpeace</option>
+            <select id="charity">
+                <option value="1">Habitat for Humanity</option>
             </select>
         </div>
-        <div class="clearfix"></div>
-    </div>
-
-    <div class="form-section">
-        <h4 class="form-section-header">Tell us about the race.</h4>
-        <div class="form-line">
-            <p class="note">It's happening on</p>
-            <input value="10/12/2015"/>
-            <p class="note">in</p>
-            <input placeholder="Chicago, IL"/>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-
-    <div class="form-section">
-        <h4 class="form-section-header">Enter a description for your goal.</h4>
-        <p class="note">This will be displayed to everyone who comes to donate to your fundraiser. Tell them about yourself, and what is driving you to cross the finish line!</p>
-        <textarea></textarea>
-        <div class="clearfix"></div>
-    </div>
-
-    <div class="form-section">
-        <h4 class="form-section-header">Have you done this before?</h4>
-        <p class="note">Skip this section if you haven't, but if you have, enter your previous times.</p>
-        <textarea></textarea>
-        <div class="clearfix"></div>
-    </div>
-    <div class="form-section">
-        <h4 class="form-section-header">What is your target time for this race?</h4>
-        <textarea></textarea>
-        <div class="clearfix"></div>
-    </div>
-
-    <div class="form-section">
-        <h4 class="form-section-header">Enter your personal info.</h4>
-        <p class="note">Only your name will be visible to the public.</p>
-        <textarea></textarea>
 
         <button type="submit" class="button accent">Continue</button>
         <div class="clearfix"></div>

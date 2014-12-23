@@ -28,7 +28,10 @@ html#dash
     background: white
 
 .clearfix
-    clear: both
+    &:after
+        content: ""
+        display: table
+        clear: both
 
 .right
     float: right
@@ -56,6 +59,12 @@ p.notice, p.alert
         color: lighten(#CF0000, 55%)
 
 // MODALS
+
+.center-wrap
+    margin: 0 auto
+    position: relative
+    max-width: 1170px
+    width: 100%
 
 .modal
     background: rgba(0,0,0,.3)
