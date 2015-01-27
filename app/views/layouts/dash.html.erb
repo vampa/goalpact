@@ -1,52 +1,24 @@
 <!DOCTYPE <!doctype html>
 <html lang="en" id="dash">
-<head>
-    <title>Goal Pact | Dashboard</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-
-    <link rel="stylesheet" href="http://i.icomoon.io/public/temp/536578d84e/VAMPA/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+<%= render "head" %>
 <body>
-    <section id="sidebar-wrap">
-        <a href="<%= root_path %>" id="logo">
-            <img src="<%= asset_path('dark_logo.png') %>" />
-        </a>
-        <h4 class="list-header">Goals</h4>
-        <ul id="goals-list">
-            <!-- <li class="goal">
-                <a href="#">Chicago Marathon</a>
-            </li> -->
-            <li class="goal">
-                <em>No goals yet!</em>
-            </li>
-        </ul>
-        <a href="<%= new_goal_path %>" class="new-goal">+ New Goal</a>
-        <p class="divider"></p>
-        <h4 class="list-header">Pacts</h4>
-        <ul id="pacts-list">
-        <li class="pact">
-            <a href="#">John Doe</a>
-            <span class="right">$30</span>
-        </li>
-        <li class="pact">
-            <a href="#">Adi Malik</a>
-            <span class="right">$50</span>
-        </li>
-        </ul>
-        <a href="#" class="new-pact">+ Explore Goals</a>
-        <div id="user-wrap">
-            <h5>Welcome back, Alex</h5>
-            <%= link_to("Logout", destroy_user_session_path, :method => "delete") %>
+    <section id="header-wrap">
+        <a href="" class="button accent header-new-goal">Set New Goal</a>
+        <div class="header-goal">
+            <span class="goal-name">Chicago Marathon</span>
+            <ul class="goal-name-dropdown" style="display: none;">
+                <li>View Goal Profile</li>
+                <li>Share Goal</li>
+            </ul>
         </div>
+        <a href="<%= root_path %>" id="logo">
+            <img src="<%= asset_path('icon.png') %>" />
+        </a>
+        <%= link_to("Logout", destroy_user_session_path, :method => "delete", :class => "logout-link") %>
     </section>
 
     <div id="center-wrap">
-        <section id="dash-wrap">
-            <%= yield %>
-        </section>
+        <%= yield %>
     </div>
 </body>
 </html>

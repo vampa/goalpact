@@ -25,31 +25,31 @@ input
 // BUTTON
 
 button, a.button, input[type="submit"]
-    +roundedCorners(4px)
+    +roundedCorners(2px)
     +shadow(inset 0px 1px 1px rgba(255, 255, 255, .1))
     background-color: $light_grey
     border: 0
     color: #333
     cursor: pointer
-    font-weight: 500
-    font-size: 15px
-    padding: 10px 20px 10px 20px
-    text-transform: uppercase
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8)
+    font-weight: 300
+    font-size: 13px
+    padding: 8px 20px
     &:hover
         +shadow(inset 0px 1px 4px 1px rgba(0, 0, 0, .05))
     &.accent
-        +backgroundGradient(lighten($highlight-color, 0%), darken($highlight-color, 10%))
-        +text-shadow(1px 1px 1px darken($highlight_color, 10%))
-        color: #545c6a
+        background-color: #2b71b1
+        +backgroundGradient(#3384c3, #2375b4)
+        border: 1px solid #2A68A5
+        color: #FFF
         &.is-loading
             +gradientStriped()
             +animation(progress-bar-stripes 1s linear infinite)
             background-position: 0 0
             background-size: 40px 40px
         &:hover
-            +shadow(inset 0px 1px 10px 1px rgba(0, 0, 0, .15))
-            color: darken(#545c6a, 10%)
+            background-color: #2b71b1
+            +shadow(inset 0px 0px 2px 0px rgba(0, 0, 0, .2))
+            color: #FFF
 
 // FORMS
 

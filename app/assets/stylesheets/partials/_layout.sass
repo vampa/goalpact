@@ -39,6 +39,9 @@ html#dash
 .blue
     color: $light_blue
 
+.dark-blue
+    color: $dark_blue
+
 .green
     color: $green
 
@@ -48,7 +51,7 @@ html#dash
     text-transform: uppercase
 
 p.notice, p.alert
-    +roundedCorners()
+    +roundedCorners(2px)
     background: #2980B9
     color: lighten(#2980B9, 55%)
     padding: 10px 20px

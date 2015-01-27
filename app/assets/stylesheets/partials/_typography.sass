@@ -1,11 +1,28 @@
 // FONTS
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,500,700,400)
+@font-face
+    font-family: "Mission Gothic"
+    font-weight: 400
+    src: font-url('MissionGothicRegular.otf') format('opentype')
+
+@font-face
+    font-family: "Mission Gothic"
+    font-weight: 200
+    src: font-url('MissionGothicLight.otf') format('opentype')
+
+@font-face
+    font-family: "Mission Gothic"
+    font-weight: 600
+    src: font-url('MissionGothicBold.otf') format('opentype')
 
 // CONTENT RESET STYLES
 
+body
+    font-size: 62.5%
+
 div, li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td
-    font-family: "Roboto", "Helvetica Neue", Verdana, Arial, sans-serif
+    color: $black
+    font-family: "Helvetica Neue", Arial, sans-serif
     font-size: 11pt
     letter-spacing: .03em
     list-style: none outside none
@@ -15,7 +32,8 @@ div, li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td
 // HEADERS
 
 h1, h2, h3, h4, h5, h6
-    font-weight: 500
+    font-family: "Mission Gothic", "Times New Roman", Arial, sans-serif
+    font-weight: 600
     padding-bottom: .5em
     width: 100%
 
