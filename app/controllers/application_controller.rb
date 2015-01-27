@@ -14,6 +14,20 @@ class ApplicationController < ActionController::Base
     def dashboard
     end
 
+    def charity
+        @charity = Charity.where(:subdomain => params[:subdomain]).first
+        if @charity == nil
+            redirect_to :root
+        end
+    end
+
+    def goal
+        @goal = Goal.where(:id => params[:goal_id]).first
+        if @goal == nil
+            redirect_to :root
+        end
+    end
+
     private
 
     def direct_to_dash!
