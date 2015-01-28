@@ -33,4 +33,17 @@ $(document).ready(function() {
             $(this).hide();
         }
     });
+
+    if ($('body').attr('data-charity-id') == 'nil') {
+      var url = '/charity';
+      var response = $.ajax({
+                        type: "GET",
+                        url: url,
+                        success: function(response){
+                          $('h1.slogan').text(response);
+                        }
+                      });
+    }
+   
+
 });

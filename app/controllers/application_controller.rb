@@ -21,6 +21,13 @@ class ApplicationController < ActionController::Base
         end
     end
 
+    def charity_info
+        @charity = Charity.first
+        respond_to do |format|
+            format.html { render :layout => false }
+        end
+    end
+
     def goal
         @goal = Goal.where(:id => params[:goal_id]).first
         if @goal == nil

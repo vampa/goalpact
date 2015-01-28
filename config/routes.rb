@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "org/:subdomain" => "application#charity", :as => :charity
   get "goal/:goal_id" => "application#goal", :as => :goal
 
+  get "charity" => "application#charity_info", :as => :charity_info
+
   # User Routes
 
   get "dashboard" => "application#dashboard", :as => :dashboard
