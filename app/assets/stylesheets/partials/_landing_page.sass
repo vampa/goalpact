@@ -26,35 +26,36 @@
                     cursor: pointer
                     color: $light-blue
 
+.login-wrap
+    h3
+        float: left
+        margin-bottom: 10px
+        width: 100%
+    h3, label
+        color: #575759
+        line-height: 1em
+        a.right
+            color: #878789
+            padding-top: 5px
+            i
+                font-size: .9em
+            &:hover
+                color: $black
+    input
+        width: 100%
+    input[type="checkbox"]
+        width: 20px
+    label
+        float: left
+        margin-top: 2px
+    a.form-footer-link
+        width: 100%
+
 #content-wrap
     position: relative
     top: 0
     width: 100%
     z-index: 500
-    .login-wrap
-        h3
-            float: left
-            margin-bottom: 10px
-            width: 100%
-        h3, label
-            color: #575759
-            line-height: 1em
-            a.right
-                color: #878789
-                padding-top: 5px
-                i
-                    font-size: .9em
-                &:hover
-                    color: $black
-        input
-            width: 100%
-        input[type="checkbox"]
-            width: 20px
-        label
-            float: left
-            margin-top: 2px
-        a.form-footer-link
-            width: 100%
     .welcome-banner
         background-image: url(asset_path('shoes.jpg'))
         background-position: center

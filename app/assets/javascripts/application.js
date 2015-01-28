@@ -34,7 +34,7 @@ $(document).ready(function() {
         }
     });
 
-    if ($('body').attr('data-charity-id') == 'nil') {
+    if (false) {
       var url = '/charity';
       var response = $.ajax({
                         type: "GET",
