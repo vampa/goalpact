@@ -4,6 +4,7 @@
     .organization-banner
         @extend .clearfix
         background: transparent
+        border-bottom: 3px solid white
         float: left
         padding: 0
         position: relative
@@ -31,3 +32,14 @@
             bottom: 0
             right: calc(50% - 585px)
             width: 1170px
+    .organization-mission
+        background: transparent
+        padding: 0
+        margin-bottom: 50px
+        .center-wrap
+            +roundedCorners(0 0 3px 3px)
+            background: white
+            padding: 25px
+            p
+                text-align: left
+                padding-bottom: 20px
