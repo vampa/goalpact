@@ -1,109 +1,32 @@
-<section class="welcome-banner">
-    <div class="overlay-text-wrapper">
-        <h1 class="slogan"><%= @charity.name %></h1>
-        <a class="button accent" href="<%= new_goal_path %>">Get Started!</a>
+<section class="organization-banner">
+    <img src="<%= asset_path('charities/HFH.png') %>" class="cover" />
+    <div class="overlay-blurb">
+        <p><%= @charity.blurb %></p>
     </div>
+    <h1 class="organization-header"><%= @charity.name %></h1>
 </section>
 
-<section class="about" id="about">
+<section class="organization-impact" id="impact">
     <div class="center-wrap">
-        <div class="content-wrap">
-            <h4 class="about-header">Where does the money go?</h4>
-            <ol class="about-steps">
-                <li class="about-step">
-                    <img class="icon" src="<%= asset_path('g.png') %>" />
-                    <h5>Manage Goals</h5>
-                    <p>Create your fundraising goals and select the charity of your choice, then enter as much information as you want about yourself.</p>
-                </li>
-                <li class="about-step">
-                    <img class="icon" src="<%= asset_path('g.png') %>" />
-                    <h5>Get The Word Out</h5>
-                    <p>Share your goal with your network in a couple easy clicks, enabling the full potential of the web for your fundraiser.</p>
-                </li>
-                <li class="about-step">
-                    <img class="icon" src="<%= asset_path('g.png') %>" />
-                    <h5>Collect Pacts</h5>
-                    <p>Track incoming pacts made with you to see how much your efforts will and could raise for your favorite charity organization.</p>
-                </li>
-            </ol>
-        </div>
+        <p>Lipsum</p>
     </div>
 </section>
 
 <section class="gap"></section>
 
-<section class="charities" id="showcase">
+<section class="organization-impact" id="impact">
+    <div class="center-wrap">
+        <div class="section-header-line"></div>
+        <h2 class="section-header">IMPACT</h2>
+    </div>
+</section>
+
+<section class="gap"></section>
+
+<section class="organization-impact" id="impact">
     <div class="center-wrap">
         <div class="section-header-line"></div>
         <h2 class="section-header">SHOWCASE</h2>
-        <div class="content-wrap">
-            <ol class="charities-list">
-                <li class="charity">
-                    <div class="charity-logo"></div>
-                    <h5 class="charity-name">John Doe</h5>
-                    <p class="charity-total">
-                        Marathon raised
-                        <span class="green">$12,129</span>!
-                    </p>
-                </li>
-                <li class="charity">
-                    <div class="charity-logo"></div>
-                    <h5 class="charity-name">John Doe</h5>
-                    <p class="charity-total">
-                        Marathon raised
-                        <span class="green">$12,129</span>!
-                    </p>
-                </li>
-                <li class="charity">
-                    <div class="charity-logo"></div>
-                    <h5 class="charity-name">John Doe</h5>
-                    <p class="charity-total">
-                        Marathon raised
-                        <span class="green">$12,129</span>!
-                    </p>
-                </li>
-                <li class="charity row-end">
-                    <div class="charity-logo"></div>
-                    <h5 class="charity-name">John Doe</h5>
-                    <p class="charity-total">
-                        Marathon raised
-                        <span class="green">$12,129</span>!
-                    </p>
-                </li>
-                <li class="charity">
-                    <div class="charity-logo"></div>
-                    <h5 class="charity-name">John Doe</h5>
-                    <p class="charity-total">
-                        Marathon raised
-                        <span class="green">$12,129</span>!
-                    </p>
-                </li>
-                <li class="charity">
-                    <div class="charity-logo"></div>
-                    <h5 class="charity-name">John Doe</h5>
-                    <p class="charity-total">
-                        Marathon raised
-                        <span class="green">$12,129</span>!
-                    </p>
-                </li>
-                <li class="charity">
-                    <div class="charity-logo"></div>
-                    <h5 class="charity-name">John Doe</h5>
-                    <p class="charity-total">
-                        Marathon raised
-                        <span class="green">$12,129</span>!
-                    </p>
-                </li>
-                <li class="charity row-end">
-                    <div class="charity-logo"></div>
-                    <h5 class="charity-name">John Doe</h5>
-                    <p class="charity-total">
-                        Marathon raised
-                        <span class="green">$12,129</span>!
-                    </p>
-                </li>
-            </ol>
-        </div>
     </div>
 </section>
 
@@ -116,7 +39,8 @@
         <h2 class="section-header">CONTACT US</h2>
         <div class="content-wrap">
             <p class="message">
-                GoalPact is part of the <a href="http://vampa.org">VAMPA</a> network. Get in touch with us if you have questions, comments or concerns by emailing us at <a href="mailto:contact@vampa.org">contact@vampa.org</a>
+                GoalPact is part of the <a href="http://vampa.org">VAMPA</a> network. Get in touch with us if you have questions, comments or concerns by emailing us at <a href="mailto:contact@vampa.org">contact@vampa.org</a> <br />
+                Also contact us if you would like us to support your charity!
             </p>
         </div>
     </div>

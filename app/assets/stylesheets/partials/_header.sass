@@ -1,0 +1,66 @@
+// HEADER
+
+.header-wrap
+    padding: 50px 25px
+    position: absolute
+    width: 100%
+    z-index: 1000
+    .center-wrap
+        #logo
+            img
+                height: 50px
+        .navigation
+            position: absolute
+            right: 25px
+            top: 2px
+            li
+                float: left
+                height: 100%
+                padding: 8px 0 8px 35px
+                &:first-child
+                    padding-left: 0
+                a, &.login
+                    color: white
+                    font-weight: 400
+                a:hover
+                    cursor: pointer
+                    color: $light-blue
+    &.organization
+        background: white
+        border-bottom: 3px solid $blue
+        padding: 25px
+        #logo img
+            margin-top: 0
+        .navigation
+            top: 7px
+        li, a
+            color: $black !important
+            &.button
+                color: white !important
+        a:hover
+            cursor: pointer
+            color: $light-blue !important
+.login-wrap
+    h3
+        float: left
+        margin-bottom: 10px
+        width: 100%
+    h3, label
+        color: #575759
+        line-height: 1em
+        a.right
+            color: #878789
+            padding-top: 5px
+            i
+                font-size: .9em
+            &:hover
+                color: $black
+    input
+        width: 100%
+    input[type="checkbox"]
+        width: 20px
+    label
+        float: left
+        margin-top: 2px
+    a.form-footer-link
+        width: 100%
