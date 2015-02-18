@@ -45,7 +45,10 @@
         a:hover
             cursor: pointer
             color: $light-blue !important
-.login-wrap
+
+// LOGIN MODAL
+
+.login-wrap, .signup-box, .password-box, .login-box
     h3
         float: left
         margin-bottom: 10px
@@ -69,3 +72,28 @@
         margin-top: 2px
     a.form-footer-link
         width: 100%
+
+.signup-box, .password-box, .login-box
+    @extend .clearfix
+    +roundedCorners()
+    background: url(asset_path('bg_pattern.png')) #f7f7f9
+    margin: 150px auto
+    width: 500px
+    padding: 15px
+    #error_explanation
+        margin-bottom: 10px
+        h2
+            font-size: 1rem
+            padding-bottom: 5px
+        ul li
+            color: red
+    #links-wrap
+        a
+            clear: none
+            float: left
+            padding-right: 10px
+            margin-right: 10px
+            &:first-child
+                border-right: 1px solid #d7d7d9
+.signup-box #links-wrap a:first-child
+    border-right: 0

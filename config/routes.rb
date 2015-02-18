@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   get "new" => "goals#new", :as => :new_goal
   post "create" => "goals#create", :as => :create_goal
+
 end

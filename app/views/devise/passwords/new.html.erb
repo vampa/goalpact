@@ -1,16 +1,17 @@
-<h2></h2>
+
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "pure-form"}) do |f| %>
-  <%= devise_error_messages! %>
+    <div class="password-box">
+        <%= devise_error_messages! %>
+    	<h2 class="form-title">Forgot your password?</h2>
+    	<fieldset>
+            <%= f.email_field :email, autofocus: true, placeholder: "email@example.com" %>
+        </fieldset>
 
-	<h2 class="form-title">Forgot your password?</h2>
-	<fieldset>
-  	<%= f.email_field :email, autofocus: true, placeholder: "email@example.com" %></div>
-  </fieldset>
+    	<%= f.submit "Send me reset password instructions", :class => "button accent" %>
 
-	<%= f.submit "Send me reset password instructions" %>
+        <div id="links-wrap">
+            <%= render "devise/shared/links" %>
+        </div>
+    </div>
 <% end %>
-
-<div id="links-wrap">
-	<%= render "devise/shared/links" %>
-</div>
